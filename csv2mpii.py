@@ -16,7 +16,7 @@ if __name__ == "__main__":
         os.mkdir(target_path)
     
     if not os.path.exists(result_path):
-        os.mkdir(target_path)
+        os.mkdir(result_path)
 
     dir_list = [name for name in os.listdir(target_path) if os.path.isdir(os.path.join(target_path, name))]
     for dname in dir_list:
@@ -30,9 +30,11 @@ if __name__ == "__main__":
         files_grabbed.extend(glob.glob(os.path.join(target_path, "*",  ftype)))
 
     for fpath in tqdm.tqdm(files_grabbed):
-        basename = os.path.basename(path)
-        dirname = os.path.dirname(path)[-1]
+        basename = os.path.basename(fpath)[0]
+        dirname = os.path.dirname(fpath)[-1]
 
         fread = open(fpath, "r", encoding="utf-8")
         content = fread.read()
         all_lines = content.split("\n")
+
+        fout = open(os.path.join(result_path, dirname, basename + ".json"), "w", encoding="utf-8")
