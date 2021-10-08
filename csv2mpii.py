@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
         fout = open(os.path.join(destination, "mpii_style.json"), "w", encoding="utf-8")
 
-        instances = list()
+        instances = []
 
         files_grabbed = []
         for ftype in target_formats:
@@ -40,8 +40,8 @@ if __name__ == "__main__":
             content = fread.read()
             all_lines = content.split("\n")
 
-            vis = list()
-            joints = list()
+            vis = []
+            joints = []
             for line in all_lines:
                 snippets = line.split(",")
                 if "world" in snippets[0]:
@@ -50,7 +50,7 @@ if __name__ == "__main__":
                     continue
                 else:    
                     count = 0
-                    coords = list()
+                    coords = []
                     for snip in snippets:
                         try:
                             coord = float(snip)
