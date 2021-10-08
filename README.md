@@ -14,7 +14,7 @@
  ```
 
 ### 2. Create "input" Folder under the Project Directory
- And align target labels each into its own directory seperately.
+ And align target labels each into its own directory seperately.</br>
  **Example**
  ```
  ├── pose-label-converter/
