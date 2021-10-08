@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 snippets = line.split(",")
                 if "world" in snippets[0]:
                     continue
-                elif "name" in snippets:
+                elif " x" in snippets:
                     continue
                 else:    
                     count = 0
