@@ -34,7 +34,7 @@ if __name__ == "__main__":
             files_grabbed.extend(glob.glob(os.path.join(target_path, dname, "*",  ftype)))
 
         for fpath in files_grabbed:
-            basename = os.path.basename(fpath)[0]
+            basename = os.path.basename(fpath).split(".")[0]
 
             fread = open(fpath, "r", encoding="utf-8")
             content = fread.read()
@@ -46,21 +46,21 @@ if __name__ == "__main__":
                 snippets = line.split(",")
                 if "world" in snippets[0]:
                     pass
+                else:    
+                    count = 0
+                    coords = list()
+                    for snip in snippets:
+                        try:
+                            coord = float(snip)
+                            count+=1
 
-                count = 0
-                coords = list()
-                for snip in snippets:
-                    try:
-                        coord = float(snip)
-                        count+=1
-
-                        if count < 3:
-                            coords.append(coord)
-                    except:
-                        pass
-                
-                vis.append(1)
-                joints.append(coords)
+                            if count < 3:
+                                coords.append(coord)
+                        except:
+                            pass
+                    
+                    vis.append(1)
+                    joints.append(coords)
         
             instance = {"joints_vis" : vis, "joints" : joints,
                        "image" : basename + ".png", "scale" : 255/300,
