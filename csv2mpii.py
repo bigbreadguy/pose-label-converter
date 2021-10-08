@@ -19,7 +19,7 @@ if __name__ == "__main__":
         os.mkdir(result_path)
 
     dir_list = [name for name in os.listdir(target_path) if os.path.isdir(os.path.join(target_path, name))]
-    for dname in tqdm.trange(dir_list, desc="label types"):
+    for dname in tqdm.tqdm(dir_list, desc="label types"):
         destination = os.path.join(result_path, dname)
         if not os.path.exists(destination):
             os.mkdir(destination)
