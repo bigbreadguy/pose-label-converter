@@ -19,7 +19,7 @@ if __name__ == "__main__":
         os.mkdir(result_path)
 
     dir_list = [name for name in os.listdir(target_path) if os.path.isdir(os.path.join(target_path, name))]
-    for dname in tqdm.tqdm(dir_list):
+    for dname in tqdm.trange(dir_list, desc="label types"):
         destination = os.path.join(result_path, dname)
         if not os.path.exists(destination):
             os.mkdir(destination)
@@ -33,7 +33,7 @@ if __name__ == "__main__":
             files_grabbed.extend(glob.glob(os.path.join(target_path, dname, ftype)))
             files_grabbed.extend(glob.glob(os.path.join(target_path, dname, "*",  ftype)))
 
-        for fpath in files_grabbed:
+        for fpath in tqdm.tqdm(files_grabbed, desc="files in label type"):
             basename = os.path.basename(fpath).split(".")[0]
 
             fread = open(fpath, "r", encoding="utf-8")
