@@ -44,7 +44,7 @@ if __name__ == "__main__":
             joints = list()
             for line in all_lines:
                 snippets = line.split(",")
-                if "world" in snippets:
+                if "world" in snippets[0]:
                     pass
                 elif "name" in snippets:
                     pass   
