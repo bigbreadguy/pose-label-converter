@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 vis.append(1)
                 joints.append(coords)
         
-            intance = {"joints_vis" : vis, "joints" : joints,
+            instance = {"joints_vis" : vis, "joints" : joints,
                        "image" : basename + ".png", "scale" : 255/300,
                        "center" : [255/2, 255/2]}
             instances.append(instance)
