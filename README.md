@@ -18,7 +18,7 @@
  **Example**
  ```
  ├── pose-label-converter/
- │ ...project files
+ │   ...project files
  ├── input/
  │   ├── inputA/
  │       ├── 0000.csv
