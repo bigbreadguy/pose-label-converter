@@ -1,4 +1,4 @@
-# Pose Label Coverter
+# Pose Label Converter
  Convert pose labels into other sturctures.</br>
  **Supports CSV formats to [MPII](http://human-pose.mpi-inf.mpg.de/) format only for now**
 
