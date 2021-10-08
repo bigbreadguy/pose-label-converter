@@ -45,9 +45,9 @@ if __name__ == "__main__":
             for line in all_lines:
                 snippets = line.split(",")
                 if "world" in snippets[0]:
-                    pass
+                    continue
                 elif "name" in snippets:
-                    pass   
+                    continue
                 else:    
                     count = 0
                     coords = list()
