@@ -18,14 +18,14 @@
  **Example**
  ```
  ├── pose-label-converter/
- │ *...project files...*
+ │ ...project files
  ├── input/
  │   ├── inputA/
  │       ├── 0000.csv
- │       │ *...label files (supports .txt in CSV format also)...*
+ │       │ ...label files (supports .txt in CSV format also)
  │   ├── inputB/
- │       ├── *...label files...*
- │   ├── *...other labels...*
+ │       ├── ...label files
+ │   ├── ...other label directories
  │
  ```
  ### 3. Run the Script
