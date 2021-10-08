@@ -10,7 +10,7 @@
 ### 1. Clone the Repository
 
  ```
- git clone https://github.com/bigbreadguy/pose-label-coverter.git
+ git clone https://github.com/bigbreadguy/pose-label-converter.git
  ```
 
 ### 2. Create "input" Folder under the Project Directory
