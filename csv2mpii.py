@@ -44,8 +44,10 @@ if __name__ == "__main__":
             joints = list()
             for line in all_lines:
                 snippets = line.split(",")
-                if "world" in snippets[0]:
+                if "world" in snippets:
                     pass
+                elif "name" in snippets:
+                    pass   
                 else:    
                     count = 0
                     coords = list()
