@@ -19,13 +19,13 @@
  **Example**
  ```
  ├── pose-label-converter/
- │   ...project files
+ ├── ...project files
  ├── input/
  │   ├── inputA/
- │       ├── 0000.csv
- │       │ ...label files (supports .txt in CSV format also)
+ │   │   ├── 0000.csv
+ │   │   ├── ...label files (supports .txt in CSV format also)
  │   ├── inputB/
- │       ├── ...label files
+ │   │   ├── ...label files
  │   ├── ...other label directories
  │
  ```
