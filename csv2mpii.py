@@ -68,5 +68,5 @@ if __name__ == "__main__":
                        "image" : basename + ".png", "scale" : 255/300,
                        "center" : [255/2, 255/2]}
             instances.append(instance)
-
-            json.dump(instances, fout, ensure_ascii=False)
+    
+        json.dump(instances, fout, ensure_ascii=False)
