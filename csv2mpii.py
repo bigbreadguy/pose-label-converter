@@ -70,3 +70,4 @@ if __name__ == "__main__":
             instances.append(instance)
     
         json.dump(instances, fout, ensure_ascii=False)
+        fout.close()
