@@ -58,11 +58,14 @@ if __name__ == "__main__":
 
                             if count < 3:
                                 coords.append(coord)
+                            
+                            pass_line = False
                         except:
-                            pass
+                            pass_line = True
                     
-                    vis.append(1)
-                    joints.append(coords)
+                    if not pass_line:
+                        vis.append(1)
+                        joints.append(coords)
         
             instance = {"joints_vis" : vis, "joints" : joints,
                        "image" : basename + ".png", "scale" : 255/300,
