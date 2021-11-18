@@ -38,6 +38,7 @@ if __name__ == "__main__":
 
             fread = open(fpath, "r", encoding="utf-8")
             content = fread.read()
+            fread.close()
             all_lines = content.split("\n")
 
             vis = []
@@ -53,13 +54,14 @@ if __name__ == "__main__":
                     coords = []
                     for snip in snippets:
                         try:
-                            coord = float(snip)
-                            count+=1
+                            if not snip in [0, 1, 3]:
+                                coord = float(snip)
+                                count+=1
 
-                            if count < 3:
-                                coords.append(coord)
-                            
-                            pass_line = False
+                                if count < 3:
+                                    coords.append(coord)
+                                
+                                pass_line = False
                         except:
                             pass_line = True
                     
@@ -71,6 +73,6 @@ if __name__ == "__main__":
                        "image" : basename + ".png", "scale" : 255/300,
                        "center" : [255/2, 255/2]}
             instances.append(instance)
-    
+
         json.dump(instances, fout, ensure_ascii=False)
         fout.close()
