@@ -54,7 +54,7 @@ if __name__ == "__main__":
                     coords = []
                     for snip in snippets:
                         try:
-                            if not snip in [0, 1, 3]:
+                            if not snip in ["0", "1", "2", "3", "4", "5", "6"]:
                                 coord = float(snip)
                                 count+=1
 
