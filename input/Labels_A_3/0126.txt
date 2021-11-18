@@ -1,0 +1,7 @@
+﻿name, x, y, z
+lever1_hinge,165.1402,127.3219, 45.04855
+lever1_hinge_world,-1.1576,11.509,16.6605
+lever2_hinge,93.63281,73.1608, 43.37037
+lever2_hinge_world,5.745392,16.2627,17.42354
+ladle_hinge,74.7366,108.6296, 42.576
+ladle_hinge_world,7.441284,12.95435,17.611
