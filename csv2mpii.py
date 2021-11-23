@@ -64,10 +64,11 @@ if __name__ == "__main__":
                                 pass_line = False
                         except:
                             pass_line = True
-                    
+                    coords.reverse()
+
                     if not pass_line:
                         vis.append(1)
-                        joints.append(coords.reverse())
+                        joints.append(coords)
         
             instance = {"joints_vis" : vis, "joints" : joints,
                        "image" : basename + ".png", "scale" : 255/300,
