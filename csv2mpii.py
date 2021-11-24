@@ -69,9 +69,9 @@ if __name__ == "__main__":
                         except:
                             pass_line = True
                     coords.reverse()
-                    coords[0] = h_orient*coords[0]
 
                     if not pass_line:
+                        coords[0] = h_orient * coords[0]
                         vis.append(1)
                         joints.append(coords)
         
