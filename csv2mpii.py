@@ -20,6 +20,10 @@ if __name__ == "__main__":
 
     dir_list = [name for name in os.listdir(target_path) if os.path.isdir(os.path.join(target_path, name))]
     for dname in tqdm.tqdm(dir_list, desc="label types"):
+        if "B" in dname:
+            h_orient = -1
+        else:
+            h_orient = 1
         destination = os.path.join(result_path, dname)
         if not os.path.exists(destination):
             os.mkdir(destination)
@@ -65,6 +69,7 @@ if __name__ == "__main__":
                         except:
                             pass_line = True
                     coords.reverse()
+                    coords[0] = h_orient*coords[0]
 
                     if not pass_line:
                         vis.append(1)
